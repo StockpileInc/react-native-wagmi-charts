@@ -3300,10 +3300,10 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
-bumbag-native@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/bumbag-native/-/bumbag-native-2.3.0.tgz#d7c2faa9c83a58bc8d4e135dc7e20042585938e8"
-  integrity sha512-iI/n8f6FrCJwlpHp7T4hSu4NvcCluE62kyemcCArhYkSZvN9VWoou86enTs2hJS01vLVT5ProV74bI3N292e/Q==
+bumbag-native@^2.7.21:
+  version "2.7.21"
+  resolved "https://registry.yarnpkg.com/bumbag-native/-/bumbag-native-2.7.21.tgz#cc3439e57ea10d527067f79a7362d10a7b4b1892"
+  integrity sha512-aScoAn8jCzzKZS83TylCenq4woadA5IJijlOSfHhyxVxF4TrMmo783GlSFW9oEZZb66gdK0/xou+gJ4APKS7DQ==
   dependencies:
     "@emotion/native" "11.0.0"
     "@emotion/react" "npm:@bumbag/emotion-react@11.4.0-0"
