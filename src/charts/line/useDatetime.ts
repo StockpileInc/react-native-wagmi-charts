@@ -20,7 +20,18 @@ export function useLineChartDatetime({
   const timestamp = useDerivedValue(() => {
     if (typeof currentIndex.value === 'undefined' || currentIndex.value === -1)
       return '';
-    return data[currentIndex.value].timestamp;
+
+    // Defensive check: ensure data exists and has valid item at current index
+    if (!data || !Array.isArray(data) || currentIndex.value >= data.length) {
+      return '';
+    }
+
+    const dataItem = data[currentIndex.value];
+    if (!dataItem || typeof dataItem.timestamp === 'undefined') {
+      return '';
+    }
+
+    return dataItem.timestamp;
   }, [currentIndex, data]);
 
   const timestampString = useDerivedValue(() => {
