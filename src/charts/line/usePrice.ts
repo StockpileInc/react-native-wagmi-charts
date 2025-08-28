@@ -18,8 +18,20 @@ export function useLineChartPrice({
       index == null
     )
       return '';
-    let price = 0;
-    price = data[Math.min(index ?? currentIndex.value, data.length - 1)].value;
+
+    // Defensive check: ensure data exists and has items
+    if (!data || !Array.isArray(data) || data.length === 0) {
+      return '';
+    }
+
+    const targetIndex = Math.min(index ?? currentIndex.value, data.length - 1);
+    const dataItem = data[targetIndex];
+
+    if (!dataItem || typeof dataItem.value === 'undefined') {
+      return '';
+    }
+
+    const price = dataItem.value;
     return price.toFixed(precision).toString();
   }, [currentIndex, data, precision]);
   const formatted = useDerivedValue(() => {
